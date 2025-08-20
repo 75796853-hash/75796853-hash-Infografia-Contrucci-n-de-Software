@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Construcción de Software</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        .definition-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(to right, #f3f7ff, #e6f0ff);
+            border-left: 5px solid var(--secondary);
+        }
+        
+        .process-container {
+            grid-column: 1 / -1;
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: "→";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: var(--secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .process-step:not(:last-child):after {
+                content: "↓";
+                right: 50%;
+                top: auto;
+                bottom: -15px;
+                left: auto;
+                transform: translateX(50%);
+            }
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+        
+        .key-points {
+            grid-column: 1 / -1;
+        }
+        
+        .point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--success);
+        }
+        
+        .point-icon {
+            background: var(--success);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark);
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CONSTRUCCIÓN DE SOFTWARE</h1>
+            <p class="subtitle">Proceso de creación detallada de software operativo y significativo mediante la combinación de diversas actividades técnicas</p>
+        </header>
+        
+        <div class="content">
+            <div class="card definition-card">
+                <h2>¿Qué es la Construcción de Software?</h2>
+                <p>Es la etapa fundamental en el ciclo de vida del desarrollo de software que se enfoca en la creación detallada del producto. Consiste en la aplicación de conocimientos de algoritmos y prácticas de codificación para crear programas informáticos, materializando el diseño en código funcional.</p>
+            </div>
+            
+            <div class="card">
+                <h2>Características Principales</h2>
+                <ul style="list-style-type: none;">
+                    <li>✔️ Proceso intensamente intelectual</li>
+                    <li>✔️ Influenciado por la creatividad y juicio humano</li>
+                    <li>✔️ Parte visible pero no siempre la más compleja</li>
+                    <li>✔️ Estrechamente ligada al diseño y pruebas</li>
+                    <li>✔️ Busca software funcional, robusto y de calidad</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Objetivos Clave</h2>
+                <ul style="list-style-type: none;">
+                    <li>🎯 Convertir el diseño en código funcional</li>
+                    <li>🎯 Construir componentes según especificaciones</li>
+                    <li>🎯 Asegurar el correcto funcionamiento integrado</li>
+                    <li>🎯 Gestionar costos y tiempos eficientemente</li>
+                    <li>🎯 Producir software de calidad</li>
+                </ul>
+            </div>
+            
+            <div class="process-container">
+                <h2>Proceso de Construcción</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Análisis</h3>
+                        <p>Comprender requisitos y especificaciones</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Diseño</h3>
+                        <p>Planificar la estructura y componentes</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Codificación</h3>
+                        <p>Escribir el código según el diseño</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Verificación</h3>
+                        <p>Revisar que cumple con los requisitos</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h3>Pruebas</h3>
+                        <p>Unitarias, de integración, sistema</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h3>Depuración</h3>
+                        <p>Corregir errores y problemas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card key-points">
+                <h2>Actividades Clave en la Construcción</h2>
+                
+                <div class="point">
+                    <div class="point-icon">C</div>
+                    <div>
+                        <h3>Codificación o Programación</h3>
+                        <p>Escribir el código fuente utilizando lenguajes de programación y herramientas seleccionadas, transformando el diseño en instrucciones ejecutables.</p>
+                    </div>
+                </div>
+                
+                <div class="point">
+                    <div class="point-icon">V</div>
+                    <div>
+                        <h3>Verificación</h3>
+                        <p>Revisar que el código implementado se ajusta a los requisitos y especificaciones definidas durante las fases previas.</p>
+                    </div>
+                </div>
+                
+                <div class="point">
+                    <div class="point-icon">P</div>
+                    <div>
+                        <h3>Pruebas (Unitarias, Integración)</h3>
+                        <p>Realizar pruebas exhaustivas para validar el correcto funcionamiento individual de cada componente y su integración con otros módulos.</p>
+                    </div>
+                </div>
+                
+                <div class="point">
+                    <div class="point-icon">D</div>
+                    <div>
+                        <h3>Depuración</h3>
+                        <p>Identificar, diagnosticar y eliminar errores o defectos en el código para garantizar el correcto funcionamiento del software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>La construcción de software es un proceso intelectual que combina creatividad y disciplina técnica para transformar diseños en productos funcionales.</p>
+        </footer>
+    </div>
+</body>
+</html>
